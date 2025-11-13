@@ -40,6 +40,14 @@ app.get("/keiyo_add", (req, res) => {
   res.redirect('/public/keiyo_add.html');
 });
 
+app.get("/phigros_add", (req, res) => {
+  let name = req.query.name;
+  let level = req.query.level;
+  let score = req.query.score;
+  let newdata = { name: name, level: level, score: score };
+  phigros.push( newdata );
+  res.redirect('/public/phigros_add.html');
+});
 
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
