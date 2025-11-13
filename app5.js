@@ -13,9 +13,22 @@ let station = [
   { id:6, code:"JE05", name:"新浦安駅"},
 ];
 
+let phigros = [
+  { name:"Rrhar'il", level:17.6, score:886069},
+  { name:"Distorted Fate", level:17.4, score:887440},
+  { name:"Igallita", level:17.4, score:880278},
+  { name:"QZKago Requiem", level:17.4, score:895563},
+  { name:"+ERABY+E CONNEC+10N", level:17.3, score:924677},
+  { name:"DESTRUCTION 3,2,1", level:17.3, score:899856},
+];
+
 app.get("/keiyo", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   res.render('db2', { data: station });
+});
+
+app.get("/phigros", (req, res) => {
+  res.render('db3', { data: phigros });
 });
 
 app.get("/keiyo_add", (req, res) => {
