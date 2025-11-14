@@ -62,6 +62,18 @@ app.get("/keiyo_add", (req, res) => {
   res.redirect('/public/keiyo_add.html');
 });
 
+app.get("/keiyo2_add", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.code;
+  let name = req.query.name;
+  let change = req.query.change;
+  let passengers = req.query.passengers;
+  let distance = req.query.distance;
+  let newdata = { id: id, code: code, name: name, change: change, passengers: passengers, distance: distance}
+  station2.push( newdata );
+  res.redirect('/public/keiyo2_add.html');
+});
+
 app.get("/phigros_add", (req, res) => {
   let name = req.query.name;
   let level = req.query.level;
