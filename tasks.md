@@ -5,12 +5,12 @@
 ### タスクリスト
 
 - [ ] 開発者向けドキュメントの作業
-  - [ ] データ構造（スキーム）の決定 :thinking:
-  - [ ] ページ構造の検討 :thinking:
-  - [ ] ページ遷移の検討 :thinking:
-  - [ ] HTTPメソッドとリソース名の決定
-  - [ ] ページ遷移図の作成 :writing_hand:
-  - [ ] ページ構造の決定
+  - [X] データ構造（スキーム）の決定 :thinking:
+  - [X] ページ構造の検討 :thinking:
+  - [X] ページ遷移の検討 :thinking:
+  - [X] HTTPメソッドとリソース名の決定
+  - [X] ページ遷移図の作成 :writing_hand:
+  - [X] ページ構造の決定
   - [ ] ドキュメントの構成の検討 :thinking:
   - [ ] 概要 :writing_hand:
   - [ ] HTTPメソッドとリソース名一覧 :writing_hand:
@@ -41,12 +41,12 @@
 ### タスクリスト
 
 - [ ] 開発者向けドキュメントの作業
-  - [ ] データ構造（スキーム）の決定 :thinking:
-  - [ ] ページ構造の検討 :thinking:
-  - [ ] ページ遷移の検討 :thinking:
-  - [ ] HTTPメソッドとリソース名の決定
-  - [ ] ページ遷移図の作成 :writing_hand:
-  - [ ] ページ構造の決定
+  - [X] データ構造（スキーム）の決定 :thinking:
+  - [X] ページ構造の検討 :thinking:
+  - [X] ページ遷移の検討 :thinking:
+  - [X] HTTPメソッドとリソース名の決定
+  - [X] ページ遷移図の作成 :writing_hand:
+  - [X] ページ構造の決定
   - [ ] ドキュメントの構成の検討 :thinking:
   - [ ] 概要 :writing_hand:
   - [ ] HTTPメソッドとリソース名一覧 :writing_hand:
@@ -77,12 +77,12 @@
 ### タスクリスト
 
 - [ ] 開発者向けドキュメントの作業
-  - [ ] データ構造（スキーム）の決定 :thinking:
-  - [ ] ページ構造の検討 :thinking:
-  - [ ] ページ遷移の検討 :thinking:
-  - [ ] HTTPメソッドとリソース名の決定
-  - [ ] ページ遷移図の作成 :writing_hand:
-  - [ ] ページ構造の決定
+  - [X] データ構造（スキーム）の決定 :thinking:
+  - [X] ページ構造の検討 :thinking:
+  - [X] ページ遷移の検討 :thinking:
+  - [X] HTTPメソッドとリソース名の決定
+  - [X] ページ遷移図の作成 :writing_hand:
+  - [X] ページ構造の決定
   - [ ] ドキュメントの構成の検討 :thinking:
   - [ ] 概要 :writing_hand:
   - [ ] HTTPメソッドとリソース名一覧 :writing_hand:
