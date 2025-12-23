@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>「<%= data.name %>」の詳細</title>
+  <style>
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #aaa;
+    padding: 8px 12px;
+  }
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <h2>「<%= data.name %>」の詳細</h2>
+  <img src="<%= icon.filename %>" alt="<%= icon.alt %>" width="1000">
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>曲名</td><td><%= data.name %></td></tr>
+    <tr><td>曲作者名</td><td><%= data.author_music %></td></tr>
+    <tr><td>譜面作者名</td><td><%= data.author_notes %></td></tr>
+    <tr><td>難易度</td><td><%= data.level %></td></tr>
+    <tr><td>速度</td><td><%= data.bpm %></td></tr>
+    <tr><td>ノーツ数</td><td><%= data.notes_figure %></td></tr>
+    <tr><td>ノーツ密度</td><td><%= data.notes_density %></td></tr>
+    <tr><td>曲の時間</td><td><%= data.time %></td></tr>
+  </table>
+  <a href="/phigros/edit/<%= id %>">編集</a>
+  <a href="/phigros/delete/<%= id %>">削除</a>
+  <a href="/phigros">曲一覧に戻る</a>
+</body>
+</html>

@@ -10,11 +10,11 @@ name|text|曲名
 author_music|text|曲作者名
 author_notes|text|譜面作者名
 level|number(step:0.1)|難易度
-score|number|最高スコア
 bpm|number(step:0.1)|速度
 notes_figure|number|ノーツ数
 notes_density|number(step:0.1)|ノーツ密度
 time|number|曲の時間
+image|image|ジャケット絵
 
 ### ページ構造
 
@@ -23,9 +23,9 @@ time|number|曲の時間
 report.js|-|Webサーバプログラム
 phigros.ejs|GET|一覧表示
 phigros_detail.ejs|GET|詳細表示
-phigros_add.ejs|POST|追加画面
-phigros_edit.ejs|PUT|編集画面
-phigros_delete.ejs|DELETE|削除画面
+phigros_edit.ejs|POST|編集画面
+phigros_delete_check.ejs|GET|削除確認画面
+phigros_new.html|POST|曲追加画面
 
 ### ページ遷移
 
@@ -33,87 +33,112 @@ phigros_delete.ejs|DELETE|削除画面
 stateDiagram-v2
     [*] --> 一覧表示
     一覧表示 --> 詳細表示: 曲名からリンク
-    詳細表示 --> 編集画面: 編集ボタン
-    編集画面 --> 登録
-    登録 --> 一覧表示
-    一覧表示 --> 追加画面: 追加ボタン
-    追加画面 --> 登録
-    詳細表示 --> 削除画面: 削除ボタン
-    削除画面 --> 一覧表示
+    詳細表示 --> 編集画面: 「編集」からリンク
+    編集画面 --> 編集処理: 登録ボタン
+    編集処理 --> 一覧表示
+    編集画面 --> 詳細表示: 「詳細に戻る」からリンク
+    編集画面 --> 一覧表示: 「曲一覧に戻る」からリンク
+    詳細表示 --> 一覧表示: 「曲一覧に戻る」からリンク
+    一覧表示 --> 曲追加画面: 「追加」からリンク
+    曲追加画面 --> 登録処理: 登録ボタン
+    登録処理 --> 一覧表示
+    曲追加画面 --> 一覧表示: 「曲一覧に戻る」からリンク
+    詳細表示 --> 削除確認画面: 「削除」からリンク
+    削除確認画面 --> 削除処理:「はい、削除します」ボタン
+    削除処理 --> 一覧表示
+    削除確認画面 --> 詳細表示:「いいえ(詳細に戻る)」からリンク
 ```
 
-## 2:物価上昇率が急激な食品集計システム
+## 2:wtt（world table tennis） 男子選手データベース
 
 ### データ構造
 
 項目名 | 型 | 内容
 -|-|-
-name|text|食品名
-cost|number|値段
-uprate|number(step:0.1)|昨年比の値段上昇率
-production|number|生産数
+name|text|選手名
+country|text|出身国
+age|number|年齢
+world_ranking|number|世界ランキング
+result|number|過去の成績
+hand|text|利き手
+type|text|戦型（ラケット）
 
 ### ページ構造
 
 ページ（リソース）名|メソッド|役割
 -|-|-
 report.js|-|Webサーバプログラム
-foodcost.ejs|GET|一覧表示
-foodcost_detail.ejs|GET|詳細表示
-foodcost_add.ejs|POST|追加画面
-foodcost_edit.ejs|PUT|編集画面
-foodcost_delete.ejs|DELETE|削除画面
+wtt.ejs|GET|一覧表示
+wtt_detail.ejs|GET|詳細表示
+wtt_edit.ejs|POST|編集画面
+wtt_delete_check.ejs|GET|削除確認画面
+wtt_new.html|POST|選手情報追加画面
 
 ### ページ遷移
 
 ```mermaid
 stateDiagram-v2
     [*] --> 一覧表示
-    一覧表示 --> 詳細表示: 曲名からリンク
-    詳細表示 --> 編集画面: 編集ボタン
-    編集画面 --> 登録
-    登録 --> 一覧表示
-    一覧表示 --> 追加画面: 追加ボタン
-    追加画面 --> 登録
-    詳細表示 --> 削除画面: 削除ボタン
-    削除画面 --> 一覧表示
+    一覧表示 --> 詳細表示: 選手名からリンク
+    詳細表示 --> 編集画面: 「編集」からリンク
+    編集画面 --> 編集処理: 登録ボタン
+    編集処理 --> 一覧表示
+    編集画面 --> 詳細表示: 「詳細に戻る」からリンク
+    編集画面 --> 一覧表示: 「選手一覧に戻る」からリンク
+    詳細表示 --> 一覧表示: 「選手一覧に戻る」からリンク
+    一覧表示 --> 選手情報追加画面: 「追加」からリンク
+    選手情報追加画面 --> 登録処理: 登録ボタン
+    登録処理 --> 一覧表示
+    選手情報追加画面 --> 一覧表示: 「選手一覧に戻る」からリンク
+    詳細表示 --> 削除確認画面: 「削除」からリンク
+    削除確認画面 --> 削除処理:「はい、削除します」ボタン
+    削除処理 --> 一覧表示
+    削除確認画面 --> 詳細表示:「いいえ(詳細に戻る)」からリンク
 ```
 
-## 3:カラオケ人気曲集計システム
+## 3:deltarune 消費アイテム一覧
 
 ### データ構造
 
 項目名 | 型 | 内容
 -|-|-
-name|text|曲名
-author|text|作曲者
-debut|number|公開日
-time|number|再生時間
-tone|text|キー
-popularity|number|月間再生回数
+name|text|アイテム名
+chapter|text|登場チャプター
+recover|number|回復量
+describe|text|アイテム説明
+place|text|入手方法（場所）
+plus_alpha|text|補足（特性など）
+image|image|アイテムの絵
 
 ### ページ構造
 
 ページ（リソース）名|メソッド|役割
 -|-|-
 report.js|-|Webサーバプログラム
-karaoke.ejs|GET|一覧表示
-karaoke_detail.ejs|GET|詳細表示
-karaoke_add.ejs|POST|追加画面
-karaoke_edit.ejs|PUT|編集画面
-karaoke_delete.ejs|DELETE|削除画面
+deltarune.ejs|GET|一覧表示
+deltarune_detail.ejs|GET|詳細表示
+deltarune_edit.ejs|POST|編集画面
+deltarune_delete_check.ejs|GET|削除確認画面
+deltarune_new.html|POST|アイテム情報追加画面
 
 ### ページ遷移
 
 ```mermaid
 stateDiagram-v2
     [*] --> 一覧表示
-    一覧表示 --> 詳細表示: 曲名からリンク
-    詳細表示 --> 編集画面: 編集ボタン
-    編集画面 --> 登録
-    登録 --> 一覧表示
-    一覧表示 --> 追加画面: 追加ボタン
-    追加画面 --> 登録
-    詳細表示 --> 削除画面: 削除ボタン
-    削除画面 --> 一覧表示
+    一覧表示 --> 詳細表示: アイテム名からリンク
+    詳細表示 --> 編集画面: 「編集」からリンク
+    編集画面 --> 編集処理: 登録ボタン
+    編集処理 --> 一覧表示
+    編集画面 --> 詳細表示: 「詳細に戻る」からリンク
+    編集画面 --> 一覧表示: 「アイテム一覧に戻る」からリンク
+    詳細表示 --> 一覧表示: 「アイテム一覧に戻る」からリンク
+    一覧表示 --> アイテム情報追加画面: 「追加」からリンク
+    アイテム情報追加画面 --> 登録処理: 登録ボタン
+    登録処理 --> 一覧表示
+    アイテム情報追加画面 --> 一覧表示: 「アイテム一覧に戻る」からリンク
+    詳細表示 --> 削除確認画面: 「削除」からリンク
+    削除確認画面 --> 削除処理:「はい、削除します」ボタン
+    削除処理 --> 一覧表示
+    削除確認画面 --> 詳細表示:「いいえ(詳細に戻る)」からリンク
 ```

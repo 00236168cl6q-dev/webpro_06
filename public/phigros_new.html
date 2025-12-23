@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>曲の追加</title>
+</head>
+<body>
+    <h2>以下に追加する曲の詳細を記入してください</h2>
+    <form action="/phigros" method="POST">
+        <input type="text" name="name" required>
+        <label for="name">:曲名</label><br>
+        <input type="text" name="author_music" required>
+        <label for="author_music">:曲作者名</label><br>
+        <input type="text" name="author_notes">
+        <label for="author_notes">:譜面作者名</label><br>
+        <input type="text" name="level" required>
+        <label for="level">:難易度</label><br>
+        <input type="text" name="bpm" required>
+        <label for="bpm">:速度</label><br>
+        <input type="text" name="notes_figure" required>
+        <label for="notes_figure">:ノーツ数</label><br>
+        <input type="text" name="notes_density" required>
+        <label for="notes_density">:ノーツ密度</label><br>
+        <input type="text" name="time" required>
+        <label for="time">:曲の時間</label><br>
+        <input type="text" name="image" required>
+        <label for="image">:画像ファイル名</label><br>
+        <input type="submit" value="登録">
+    </form>
+    <br>
+    <a href="/phigros">曲一覧に戻る</a>
+</body>
+</html>
