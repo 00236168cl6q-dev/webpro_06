@@ -62,6 +62,7 @@ world_ranking|number|世界ランキング
 result|number|過去の成績
 hand|text|利き手
 type|text|戦型（ラケット）
+image|image|選手画像
 
 ### ページ構造
 
