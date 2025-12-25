@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>削除確認</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #ff5555;
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul h2 {
+      color: #ffff66;
+      margin: 0;
+    }
+
+    input[type="submit"] {
+      background-color: #ff4444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff7777;
+    }
+
+    a {
+      display: inline-block;
+      color: #66ccff;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>一度削除したアイテムの情報は復元することができません。本当に削除しますか？</h2>
+
+  <p>
+    以下のアイテムの情報を削除しようとしています。
+  </p>
+
+  <ul>
+    <h2><%= data.name %></h2>
+  </ul>
+
+  <!-- 削除確定 -->
+  <form action="/deltarune/delete/<%= id %>" method="POST">
+    <input type="submit" value="はい、削除します">
+  </form>
+
+  <!-- キャンセル -->
+  <a href="/deltarune/<%= id %>">いいえ（詳細に戻る）</a>
+
+</body>
+</html>

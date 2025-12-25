@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>「<%= data.name %>」の編集</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: sans-serif;
+      text-align: center; /* 全体を中央寄せ */
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px auto; /* テーブルを中央に */
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 8px 12px;
+    }
+    th {
+      background-color: #222222;
+      font-weight: bold;
+      width: 180px;
+      text-align: left;
+    }
+    td {
+      background-color: #111111;
+      width: 360px;
+    }
+    input[type="text"] {
+      width: 95%;
+      background-color: #000000;
+      color: #ffffff;
+      border: 1px solid #777;
+      padding: 6px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 24px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #cccccc;
+    }
+    a {
+      display: inline-block;
+      margin: 20px 15px;
+      color: #66ccff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>「<%= data.name %>」の編集</h2>
+  <form action="/deltarune/update/<%= id %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>アイテム名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>登場チャプター</td><td><input type="text" name="chapter" value="<%= data.chapter %>"></td></tr>
+      <tr><td>効果</td><td><input type="text" name="effect" value="<%= data.effect %>"></td></tr>
+      <tr><td>アイテム説明</td><td><input type="text" name="describe" value="<%= data.describe %>"></td></tr>
+      <tr><td>入手方法（場所）</td><td><input type="text" name="place" value="<%= data.place %>"></td></tr>
+      <tr><td>補足（特性など）</td><td><input type="text" name="plus_alpha" value="<%= data.plus_alpha %>"></td></tr>
+      <tr><td>画像ファイル名</td><td><input type="text" name="image" value="<%= data.image %>"></td></tr>
+    </table>
+    <input type="submit" value="登録">
+  </form>
+  <a href="/deltarune/">アイテム一覧に戻る</a>
+  <a href="/deltarune/<%= id %>">詳細に戻る</a>
+</body>
+</html>

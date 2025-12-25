@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>wtt 男子選手一覧</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>wtt 男子選手一覧</h2>
+  <table>
+    <tr><th>代表国</th><th>選手名</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.country %></td>
+        <td><a href="/wtt/<%= number %>"><%= row.name %></a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <a href="/wtt/create">追加</a>
+</body>
+</html>

@@ -19,7 +19,7 @@
 </head>
 <body>
   <h2>「<%= data.name %>」の編集</h2>
-  <form action="/keiyo2_2/update/<%= data.id - 1 %>" method="POST">
+  <form action="/phigros/update/<%= data.id - 1 %>" method="POST">
     <table>
       <tr><th>項目</th><th>データ</th></tr>
       <tr><td>曲名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>

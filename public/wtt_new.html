@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>選手情報の追加</title>
+</head>
+<body>
+    <h2>以下に追加する選手の詳細を記入してください</h2>
+    <form action="/wtt" method="POST">
+        <input type="text" name="name" required>
+        <label for="name">:選手名</label><br>
+        <input type="text" name="country" required>
+        <label for="country">:代表国</label><br>
+        <input type="number" name="age">
+        <label for="age">:年齢（数字のみ）</label><br>
+        <input type="number" name="world_ranking" required>
+        <label for="world_ranking">:世界ランキング（数字のみ）</label><br>
+        <input type="text" name="result" required>
+        <label for="result">:過去の成績</label><br>
+        <input type="text" name="hand" required>
+        <label for="hand">:利き手（右or左）</label><br>
+        <input type="text" name="type" required>
+        <label for="type">:戦型（シェーク攻撃型orカット型orペンホルダー）</label><br>
+        <input type="text" name="image" required>
+        <label for="image">:画像ファイル名</label><br>
+        <input type="submit" value="登録">
+    </form>
+    <br>
+    <a href="/wtt">選手一覧に戻る</a>
+</body>
+</html>

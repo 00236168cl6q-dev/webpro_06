@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>「<%= data.name %>」の詳細</title>
+  <style>
+    h2 {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    body {
+    background-color: #000000; 
+    color: #ffffff;          
+    }
+    table {
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.75); /* 半透明黒 */
+    color: #ffffff;
+    margin: 20px auto;
+    }
+    th, td {
+    border: 1px solid #aaa;
+    padding: 8px 12px;
+    }
+    th {
+    background-color: #333333;
+    font-weight: bold;
+    }
+    a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #7f00ff; /* 紫系でDeltarune感 */
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(127, 0, 255, 0.7);
+    transition: all 0.2s ease;
+    }
+    .item-image {
+    display: block;
+    margin: 20px auto; /* 上下に余白 + 左右中央寄せ */
+    }
+  </style>
+</head>
+<body>
+  <h2>「<%= data.name %>」の詳細</h2>
+  <img src="<%= icon.filename %>" alt="<%= icon.alt %>" width="800" class="item-image">
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>アイテム名</td><td><%= data.name %></td></tr>
+    <tr><td>登場チャプター</td><td><%= data.chapter %></td></tr>
+    <tr><td>効果</td><td><%= data.effect %></td></tr>
+    <tr><td>アイテム説明</td><td><%= data.describe %></td></tr>
+    <tr><td>入手方法（場所）</td><td><%= data.place %></td></tr>
+    <tr><td>補足（特性など）</td><td><%= data.plus_alpha %></td></tr>
+  </table>
+  <a href="/deltarune/edit/<%= id %>">編集</a>
+  <a href="/deltarune/delete/<%= id %>">削除</a>
+  <a href="/deltarune">アイテム一覧に戻る</a>
+</body>
+</html>

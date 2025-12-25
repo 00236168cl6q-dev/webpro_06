@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>「<%= data.name %>」の編集</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>「<%= data.name %>」の編集</h2>
+  <form action="/wtt/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>選手名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>代表国</td><td><input type="text" name="country" value="<%= data.country %>"></td></tr>
+      <tr><td>年齢（数字のみ）</td><td><input type="number" name="age" value="<%= data.age %>"></td></tr>
+      <tr><td>世界ランキング（数字のみ）</td><td><input type="number" name="world_ranking" value="<%= data.world_ranking %>"></td></tr>
+      <tr><td>過去の成績</td><td><input type="text" name="result" value="<%= data.result %>"></td></tr>
+      <tr><td>利き手（右or左）</td><td><input type="text" name="hand" value="<%= data.hand %>"></td></tr>
+      <tr><td>戦型（シェーク攻撃型orカット型orペンホルダー）</td><td><input type="text" name="type" value="<%= data.type %>"></td></tr>
+      <tr><td>画像ファイル名</td><td><input type="text" name="image" value="<%= data.image %>"></td></tr>
+    </table>
+    <input type="submit" value="登録">
+  </form>
+  <a href="/wtt/">選手一覧に戻る</a>
+  <a href="/wtt/<%= id %>">詳細に戻る</a>
+</body>
+</html>

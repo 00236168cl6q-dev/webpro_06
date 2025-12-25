@@ -10,7 +10,7 @@ name|text|曲名
 author_music|text|曲作者名
 author_notes|text|譜面作者名
 level|number(step:0.1)|難易度
-bpm|number(step:0.1)|速度
+bpm|text(step:0.1)|速度
 notes_figure|number|ノーツ数
 notes_density|number(step:0.1)|ノーツ密度
 time|number|曲の時間
@@ -56,7 +56,7 @@ stateDiagram-v2
 項目名 | 型 | 内容
 -|-|-
 name|text|選手名
-country|text|出身国
+country|text|代表国
 age|number|年齢
 world_ranking|number|世界ランキング
 result|number|過去の成績
@@ -105,11 +105,11 @@ stateDiagram-v2
 -|-|-
 name|text|アイテム名
 chapter|text|登場チャプター
-recover|number|回復量
+effect|text|効果
 describe|text|アイテム説明
 place|text|入手方法（場所）
 plus_alpha|text|補足（特性など）
-image|image|アイテムの絵
+image|image|アイテムに関連するエリア画像
 
 ### ページ構造
 
@@ -134,7 +134,7 @@ stateDiagram-v2
     編集画面 --> 詳細表示: 「詳細に戻る」からリンク
     編集画面 --> 一覧表示: 「アイテム一覧に戻る」からリンク
     詳細表示 --> 一覧表示: 「アイテム一覧に戻る」からリンク
-    一覧表示 --> アイテム情報追加画面: 「追加」からリンク
+    一覧表示 --> アイテム情報追加画面: 「アイテム情報を追加」からリンク
     アイテム情報追加画面 --> 登録処理: 登録ボタン
     登録処理 --> 一覧表示
     アイテム情報追加画面 --> 一覧表示: 「アイテム一覧に戻る」からリンク

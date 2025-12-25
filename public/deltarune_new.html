@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アイテム情報の追加</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
+        h2, a {
+            text-align: center;
+        }
+        form {
+            width: 360px;
+            margin: 0 auto;   /* フォーム全体を中央へ */
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        input[type="text"] {
+            width: 100%;
+            background-color: #111;
+            color: #fff;
+            border: 1px solid #aaa;
+            padding: 6px;
+        }
+        input[type="submit"] {
+            margin-top: 16px;
+            width: 100%;
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #aaa;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #666;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #8cf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h2>以下に追加するアイテムの詳細を記入してください</h2>
+<form action="/deltarune" method="POST">
+    <label for="name">アイテム名</label>
+    <input type="text" name="name" required>
+    <label for="chapter">登場チャプター</label>
+    <input type="text" name="chapter" required>
+    <label for="effect">効果</label>
+    <input type="text" name="effect">
+    <label for="describe">アイテム説明</label>
+    <input type="text" name="describe" required>
+    <label for="place">入手方法（場所）</label>
+    <input type="text" name="place" required>
+    <label for="plus_alpha">補足（特性など）</label>
+    <input type="text" name="plus_alpha">
+    <label for="image">画像ファイル名</label>
+    <input type="text" name="image">
+    <input type="submit" value="登録">
+</form>
+<a href="/deltarune">アイテム一覧に戻る</a>
+</body>
+</html>

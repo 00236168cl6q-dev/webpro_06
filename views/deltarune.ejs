@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>deltarune 消費アイテム一覧</title>
+  <style>
+    h2 {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    body {
+    background-image: url("/public/background_3.webp"); /* 画像パス */
+    background-size: cover;                  /* 画面いっぱい */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000;
+    }
+    body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* 暗くする */
+    z-index: -1;
+    }
+    a {
+    color: #8be9fd;      /* 明るい水色 */
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+    table {
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.75); /* 半透明黒 */
+    color: #ffffff;
+    margin: 20px auto;
+    }
+    th, td {
+    border: 1px solid #888;
+    padding: 8px 12px;
+    }
+    th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    }
+    .add-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #7f00ff; /* 紫系でDeltarune感 */
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(127, 0, 255, 0.7);
+    transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <h2>deltarune 消費アイテム一覧</h2>
+  <table>
+    <tr><th>アイテム名</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr><td><a href="/deltarune/<%= number %>"><%= row.name %></a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <a href="/deltarune/create" class="add-button">アイテム情報を追加</a>
+</body>
+</html>
