@@ -4,16 +4,66 @@
   <meta charset="utf-8">
   <title>「<%= data.name %>」の編集</title>
   <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background-color: #000;
+      color: #ebebeb;
+      font-family: sans-serif;
+    }
+    h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
     table {
       border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      background-color: #b3b3b3;
+      color: #222;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
     }
     th, td {
       border: 1px solid #aaa;
-      padding: 8px 12px;
+      padding: 10px 14px;
+      vertical-align: middle;
     }
     th {
-      background-color: #f0f0f0;
+      background-color: #ff5900;
+      color: #222;
       font-weight: bold;
+      width: 35%;
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 98%;
+      padding: 6px 8px;
+      font-size: 14px;
+      border: 1px solid #888;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      background-color: #0066cc;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #004c99;
+    }
+    a {
+      color: #4da3ff;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>

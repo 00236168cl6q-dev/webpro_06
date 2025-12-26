@@ -4,17 +4,50 @@
   <meta charset="utf-8">
   <title>「<%= data.name %>」の詳細</title>
   <style>
-  table {
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #aaa;
-    padding: 8px 12px;
-  }
-  th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-  }
+  body {
+      margin: 0;
+      padding: 30px;
+      background-color: #000;
+      color: #eee;
+      font-family: sans-serif;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    img {
+      display: block;
+      margin-bottom: 20px;
+      max-width: 100%;
+      border: 3px solid #444;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      background-color: #b8b6b6;
+      color: #222;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px 14px;
+    }
+    th {
+      background-color: #ff5900;
+      font-weight: bold;
+      width: 30%;
+    }
+    a {
+      color: #4da3ff;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>

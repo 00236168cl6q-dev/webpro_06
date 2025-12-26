@@ -4,16 +4,54 @@
   <meta charset="utf-8">
   <title>wtt 男子選手一覧</title>
   <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url("/public/wtt_logo.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #222;
+    }
+    h2 {
+      text-align: center;
+      color: #ffffff;
+      margin: 40px 0 20px;
+    }
     table {
       border-collapse: collapse;
+      width: 600px;
+      margin: 0 auto 20px;
+      background: rgba(146, 146, 146, 0.95);
+      border-radius: 10px;
+      overflow: hidden; /* 角丸を効かせる */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
     th, td {
-      border: 1px solid #aaa;
-      padding: 8px 12px;
+      border: 1px solid #ccc;
+      padding: 10px 14px;
+      text-align: left;
     }
     th {
-      background-color: #f0f0f0;
+      background-color: #ff561e;
       font-weight: bold;
+    }
+    a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* 下のリンクを中央寄せ */
+    body > a {
+      display: block;
+      width: 500px;
+      margin: 0 auto 40px;
+      text-align: right;
+      color: #fff;
     }
   </style>
 </head>
