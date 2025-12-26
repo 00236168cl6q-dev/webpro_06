@@ -43,7 +43,7 @@ let deltarune = [
     { name:"ラプソティー", chapter:"Ch4", effect:"115HP回復", describe:"軽い口当たりの銀色ドリンク。注ぐと やさしい歌声のような音がする。", place:"Ch4 書斎の店(250D$)", plus_alpha:"", image:"syosai.jpg"},
     { name:"スカーレッティー", chapter:"Ch4", effect:"160HP回復", describe:"真っ赤なドリンク。甘ったるいフルーツフレーバー。", place:"Ch4 書斎の店(450D$)・ミズルから「する」・第二の聖域(寄付額による)", plus_alpha:"", image:"syosai.jpg"},
     { name:"ビターティア", chapter:"Ch4", effect:"仲間一人のHPを全回復", describe:"空から降ってきた 苦い水の滴。", place:"Ch4 ミス・ミズルから「する」", plus_alpha:"", image:"ms_mizuru.png"},
-]
+];
 
 app.get("/deltarune", (req, res) => {
   res.render('deltarune', { data: deltarune });
@@ -84,6 +84,7 @@ app.get("/deltarune/edit/:number", (req, res) => {
 app.post("/deltarune/update/:number", (req, res) => {
   // 本来は変更する番号が存在するか，各項目が正しいか厳重にチェックする
   // 本来ならここにDBとのやり取りが入る
+  const number = req.params.number;
   deltarune[req.params.number].name = req.body.name;
   deltarune[req.params.number].chapter = req.body.chapter;
   deltarune[req.params.number].effect = req.body.effect;
@@ -92,7 +93,7 @@ app.post("/deltarune/update/:number", (req, res) => {
   deltarune[req.params.number].plus_alpha = req.body.plus_alpha;
   deltarune[req.params.number].image = req.body.image;
   console.log( deltarune );
-  res.redirect('/deltarune' );
+  res.redirect("/deltarune/" + number);
 });
 
 app.get("/deltarune/delete/:number", (req, res) => {

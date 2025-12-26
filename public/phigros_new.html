@@ -13,16 +13,16 @@
         <label for="author_music">:曲作者名</label><br>
         <input type="text" name="author_notes">
         <label for="author_notes">:譜面作者名</label><br>
-        <input type="text" name="level" required>
-        <label for="level">:難易度</label><br>
+        <input type="number(step:0.1)" name="level" required>
+        <label for="level">:難易度（数字 少数第1位まで記述可能）</label><br>
         <input type="text" name="bpm" required>
-        <label for="bpm">:速度</label><br>
-        <input type="text" name="notes_figure" required>
-        <label for="notes_figure">:ノーツ数</label><br>
-        <input type="text" name="notes_density" required>
-        <label for="notes_density">:ノーツ密度</label><br>
-        <input type="text" name="time" required>
-        <label for="time">:曲の時間</label><br>
+        <label for="bpm">:速度（数字及び数字の範囲のみ bpmは記述しないこと）</label><br>
+        <input type="number" name="notes_figure" required>
+        <label for="notes_figure">:ノーツ数（整数数字で記述）</label><br>
+        <input type="number(step:0.01)" name="notes_density" required>
+        <label for="notes_density">:ノーツ密度（数字 少数第2位まで記述可能）</label><br>
+        <input type="number" name="time" required>
+        <label for="time">:曲の時間（整数数字で記述）</label><br>
         <input type="text" name="image" required>
         <label for="image">:画像ファイル名</label><br>
         <input type="submit" value="登録">

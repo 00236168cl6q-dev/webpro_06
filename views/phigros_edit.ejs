@@ -19,17 +19,17 @@
 </head>
 <body>
   <h2>「<%= data.name %>」の編集</h2>
-  <form action="/phigros/update/<%= data.id - 1 %>" method="POST">
+  <form action="/phigros/update/<%= id %>" method="POST">
     <table>
       <tr><th>項目</th><th>データ</th></tr>
       <tr><td>曲名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
       <tr><td>曲作者名</td><td><input type="text" name="author_music" value="<%= data.author_music %>"></td></tr>
       <tr><td>譜面作者名</td><td><input type="text" name="author_notes" value="<%= data.author_notes %>"></td></tr>
-      <tr><td>難易度</td><td><input type="text" name="level" value="<%= data.level %>"></td></tr>
+      <tr><td>難易度</td><td><input type="number(step:0.1)" name="level" value="<%= data.level %>"></td></tr>
       <tr><td>速度</td><td><input type="text" name="bpm" value="<%= data.bpm %>"></td></tr>
-      <tr><td>ノーツ数</td><td><input type="text" name="notes_figure" value="<%= data.notes_figure %>"></td></tr>
-      <tr><td>ノーツ密度</td><td><input type="text" name="notes_density" value="<%= data.notes_density %>"></td></tr>
-      <tr><td>曲の時間</td><td><input type="text" name="time" value="<%= data.time %>"></td></tr>
+      <tr><td>ノーツ数</td><td><input type="number" name="notes_figure" value="<%= data.notes_figure %>"></td></tr>
+      <tr><td>ノーツ密度</td><td><input type="number(step:0.01)" name="notes_density" value="<%= data.notes_density %>"></td></tr>
+      <tr><td>曲の時間</td><td><input type="number" name="time" value="<%= data.time %>"></td></tr>
       <tr><td>画像ファイル名</td><td><input type="text" name="image" value="<%= data.image %>"></td></tr>
     </table>
     <input type="submit" value="登録">

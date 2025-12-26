@@ -28,7 +28,7 @@ let wtt = [
     { name:"張禹珍", country:"韓国", age:30, world_ranking:18, result:"コンテンダーマスカット2022優勝", hand:"右", type:"シェーク攻撃型", image:"jang.webp"},
     { name:"李尚洙", country:"韓国", age:35, world_ranking:19, result:"チャンピオンズ仁川2025準優勝", hand:"右", type:"シェーク攻撃型", image:"sansu.webp"},
     { name:"戸上隼輔", country:"日本", age:24, world_ranking:20, result:"コンテンダーアルマトイ2025優勝", hand:"右", type:"シェーク攻撃型", image:"togami.jpg"},
-]
+];
 
 app.get("/wtt", (req, res) => {
   res.render('wtt', { data: wtt });
@@ -70,6 +70,7 @@ app.get("/wtt/edit/:number", (req, res) => {
 app.post("/wtt/update/:number", (req, res) => {
   // 本来は変更する番号が存在するか，各項目が正しいか厳重にチェックする
   // 本来ならここにDBとのやり取りが入る
+  const number = req.params.number;
   wtt[req.params.number].name = req.body.name;
   wtt[req.params.number].country = req.body.country;
   wtt[req.params.number].age = req.body.age;
@@ -79,7 +80,7 @@ app.post("/wtt/update/:number", (req, res) => {
   wtt[req.params.number].type = req.body.type;
   wtt[req.params.number].image = req.body.image;
   console.log( wtt );
-  res.redirect('/wtt' );
+  res.redirect("/wtt/" + number);
 });
 
 app.get("/wtt/delete/:number", (req, res) => {
