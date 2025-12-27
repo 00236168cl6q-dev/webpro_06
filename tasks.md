@@ -5,24 +5,49 @@
 ### タスクリスト
 
 - [X] 開発者向けドキュメントの作業
-  - [X] データ構造（スキーム）の決定 :thinking:
-  - [X] ページ構造の検討 :thinking:
-  - [X] ページ遷移の検討 :thinking:
-  - [X] HTTPメソッドとリソース名の決定
-  - [X] ページ遷移図の作成 :writing_hand:
-  - [X] ページ構造の決定
-  - [X] ドキュメントの構成の検討 :thinking:
-  - [X] 概要 :writing_hand:
-  - [X] HTTPメソッドとリソース名一覧 :writing_hand:
-  - [X] データ構造 :writing_hand:
-  - [X] リソース名ごとの機能の詳細 :writing_hand:
-- [ ] 管理者向けドキュメントの構成
+  - [X] 1 : phigros(音ゲー)の高難易度曲(Level:AT)一覧表示システム
+    - [X] データ構造（スキーム）の決定 :thinking:
+    - [X] ページ構造の検討 :thinking:
+    - [X] ページ遷移の検討 :thinking:
+    - [X] HTTPメソッドとリソース名の決定
+    - [X] ページ遷移図の作成 :writing_hand:
+    - [X] ページ構造の決定
+    - [X] ドキュメントの構成の検討 :thinking:
+    - [X] 概要 :writing_hand:
+    - [X] HTTPメソッドとリソース名一覧 :writing_hand:
+    - [X] データ構造 :writing_hand:
+    - [X] リソース名ごとの機能の詳細 :writing_hand:
+  - [X] 2 : wtt（world table tennis） 男子選手一覧表示システム
+    - [X] データ構造（スキーム）の決定 :thinking:
+    - [X] ページ構造の検討 :thinking:
+    - [X] ページ遷移の検討 :thinking:
+    - [X] HTTPメソッドとリソース名の決定
+    - [X] ページ遷移図の作成 :writing_hand:
+    - [X] ページ構造の決定
+    - [X] ドキュメントの構成の検討 :thinking:
+    - [X] 概要 :writing_hand:
+    - [X] HTTPメソッドとリソース名一覧 :writing_hand:
+    - [X] データ構造 :writing_hand:
+    - [X] リソース名ごとの機能の詳細 :writing_hand:
+  - [X] 3 : deltarune 消費アイテム一覧表示システム
+    - [X] データ構造（スキーム）の決定 :thinking:
+    - [X] ページ構造の検討 :thinking:
+    - [X] ページ遷移の検討 :thinking:
+    - [X] HTTPメソッドとリソース名の決定
+    - [X] ページ遷移図の作成 :writing_hand:
+    - [X] ページ構造の決定
+    - [X] ドキュメントの構成の検討 :thinking:
+    - [X] 概要 :writing_hand:
+    - [X] HTTPメソッドとリソース名一覧 :writing_hand:
+    - [X] データ構造 :writing_hand:
+    - [X] リソース名ごとの機能の詳細 :writing_hand:
+- [X] 管理者向けドキュメントの構成
   - [X] インストールから起動までの手順確認 :computer:
   - [X] インストール方法 :writing_hand:
   - [X] 起動方法 :writing_hand:
-  - [ ] 起動できない場合 :writing_hand:
-  - [ ] 終了方法 :writing_hand:
-  - [ ] 分かっている不具合 :writing_hand:
+  - [X] 起動できない場合 :writing_hand:
+  - [X] 終了方法 :writing_hand:
+  - [X] 分かっている不具合 :writing_hand:
 - [X] 利用者向けドキュメントの作業
   - [X] 構成の検討 :thinking:
   - [X] スクリーンショットの保存と整理 :computer:
@@ -34,77 +59,4 @@
   - [X] データ追加 :writing_hand:
   - [X] データ削除 :writing_hand:
   - [X] データ編集 :writing_hand:
-- [ ] 提出 :tada:
-
-## 2:wtt（world table tennis） 男子選手一覧表示システム
-
-### タスクリスト
-
-- [X] 開発者向けドキュメントの作業
-  - [X] データ構造（スキーム）の決定 :thinking:
-  - [X] ページ構造の検討 :thinking:
-  - [X] ページ遷移の検討 :thinking:
-  - [X] HTTPメソッドとリソース名の決定
-  - [X] ページ遷移図の作成 :writing_hand:
-  - [X] ページ構造の決定
-  - [X] ドキュメントの構成の検討 :thinking:
-  - [X] 概要 :writing_hand:
-  - [X] HTTPメソッドとリソース名一覧 :writing_hand:
-  - [X] データ構造 :writing_hand:
-  - [X] リソース名ごとの機能の詳細 :writing_hand:
-- [ ] 管理者向けドキュメントの構成
-  - [X] インストールから起動までの手順確認 :computer:
-  - [X] インストール方法 :writing_hand:
-  - [X] 起動方法 :writing_hand:
-  - [ ] 起動できない場合 :writing_hand:
-  - [ ] 終了方法 :writing_hand:
-  - [ ] 分かっている不具合 :writing_hand:
-- [X] 利用者向けドキュメントの作業
-  - [X] 構成の検討 :thinking:
-  - [X] スクリーンショットの保存と整理 :computer:
-  - [X] 概要 :writing_hand:
-  - [X] 使用できる機能 :writing_hand:
-  - [X] 起動画面 :writing_hand:
-  - [X] 一覧表示 :writing_hand:
-  - [X] 詳細表示 :writing_hand:
-  - [X] データ追加 :writing_hand:
-  - [X] データ削除 :writing_hand:
-  - [X] データ編集 :writing_hand:
-- [ ] 提出 :tada:
-
-## 3:deltarune 消費アイテム一覧表示システム
-
-### タスクリスト
-
-- [X] 開発者向けドキュメントの作業
-  - [X] データ構造（スキーム）の決定 :thinking:
-  - [X] ページ構造の検討 :thinking:
-  - [X] ページ遷移の検討 :thinking:
-  - [X] HTTPメソッドとリソース名の決定
-  - [X] ページ遷移図の作成 :writing_hand:
-  - [X] ページ構造の決定
-  - [X] ドキュメントの構成の検討 :thinking:
-  - [X] 概要 :writing_hand:
-  - [X] HTTPメソッドとリソース名一覧 :writing_hand:
-  - [X] データ構造 :writing_hand:
-  - [X] リソース名ごとの機能の詳細 :writing_hand:
-- [ ] 管理者向けドキュメントの構成
-  - [X] インストールから起動までの手順確認 :computer:
-  - [X] インストール方法 :writing_hand:
-  - [X] 起動方法 :writing_hand:
-  - [ ] 起動できない場合 :writing_hand:
-  - [ ] 終了方法 :writing_hand:
-  - [ ] 分かっている不具合 :writing_hand:
-- [X] 利用者向けドキュメントの作業
-  - [X] 構成の検討 :thinking:
-  - [X] スクリーンショットの保存と整理 :computer:
-  - [X] 概要 :writing_hand:
-  - [X] 使用できる機能 :writing_hand:
-  - [X] 起動画面 :writing_hand:
-  - [X] 一覧表示 :writing_hand:
-  - [X] 詳細表示 :writing_hand:
-  - [X] データ追加 :writing_hand:
-  - [X] データ削除 :writing_hand:
-  - [X] データ編集 :writing_hand:
-- [ ] 提出 :tada:
-
+- [X] 提出 :tada:
